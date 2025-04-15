@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimming Pool Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="swimming_pool_logo.png" alt="Swimming Pool Logo" class="logo">
+            <h1>Swimming Pool Booking</h1>
+        </header>
+        <form id="bookingForm">
+            <label for="name">Booker's Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="fromDate">From Date and Time:</label>
+            <input type="datetime-local" id="fromDate" name="fromDate" required>
+
+            <label for="toDate">To Date and Time:</label>
+            <input type="datetime-local" id="toDate" name="toDate" required>
+
+            <label for="adults">Number of Adults:</label>
+            <input type="number" id="adults" name="adults" min="1" max="12" required>
+
+            <label for="children">Number of Children:</label>
+            <input type="number" id="children" name="children" min="0" max="12" required>
+
+            <div id="supervisorSection" style="display: none;">
+                <label for="supervisor">Supervisor's Name:</label>
+                <input type="text" id="supervisor" name="supervisor">
+            </div>
+
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="confirmation" style="display: none;">
+            <h2>Booking Confirmation</h2>
+            <p id="confirmationMessage"></p>
+        </div>
+        <div id="calendar">
+            <h2>Booking Calendar</h2>
+            <ul id="bookingList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
